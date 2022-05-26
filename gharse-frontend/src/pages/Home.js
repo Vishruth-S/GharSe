@@ -1,7 +1,9 @@
 import React from 'react'
+import { useEffect, useState } from 'react'
 import Card from '../components/Card'
 import Landing from '../components/Landing'
 import '../styles/Home.scss'
+import axios from "axios"
 
 const tempData = [{
     name: "Vendakka",
@@ -38,15 +40,24 @@ const tempData = [{
 
 
 const Home = () => {
+    const [data, setData] = useState([])
+    const getData = async () => {
+        const res = await axios.get('https://gharse.herokuapp.com/')
+        setData(res.data)
+    }
+    useEffect(() => {
+        getData()
+    }, [])
     return (
         <div>
             <Landing />
-            <div>
-
+            <div className='home-title'>
+                <h3>Featured Products</h3>
             </div>
             <div className='home-main'>
                 <div className='row'>
-                    {tempData.map((item, id) => (
+                    {console.log(data)}
+                    {data.map((item, id) => (
                         <div className='home-col col-3' key={id}>
                             <Card item={item} />
                         </div>

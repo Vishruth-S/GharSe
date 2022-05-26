@@ -1,5 +1,5 @@
 .home-main {
-    padding: 70px;
+    padding: 60px;
 }
 
 .home-col {
@@ -7,11 +7,21 @@
 }
 
 .home-add-btn {
-    background: #78e778;
+    background: #49a84c;
+    color: white;
     border-radius: 30px;
     padding: 5px 15px;
 }
 
 .home-card-img-top {
     height: 200px;
+}
+
+
+.home-title {
+    margin-top: 40px;
+
+    h3 {
+        margin-left: 70px;
+    }
 }
