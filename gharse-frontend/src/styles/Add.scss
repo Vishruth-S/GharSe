@@ -1,0 +1,29 @@
+.add-form-container {
+    text-align: center;
+    margin-top: 60px;
+    background: #efefef;
+    width: 30%;
+    margin: auto;
+    margin-top: 42px;
+    padding: 20px;
+}
+
+.add-form-container {
+
+    input,
+    textarea {
+        width: 75%;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 10px;
+        border: none;
+    }
+
+    button {
+        background: #78e778;
+        border-radius: 30px;
+        padding: 5px 15px;
+        outline: none;
+        border: none;
+    }
+}
